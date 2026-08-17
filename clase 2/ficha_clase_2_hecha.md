@@ -37,14 +37,14 @@ Analizar y delimitar una funcionalidad antes de diseñar clases o escribir códi
 | N.º | Expresión ambigua | Pregunta que debe responder el cliente |
 |---:|---|---|
 | 1 | Distancia | ¿existe distancia minima que debe estar para la captura del pokemon? |
-| 2 | El entrenador intenta capturar usando la capsula | COMPLETAR |
-| 3 | COMPLETAR | COMPLETAR |
+| 2 | El entrenador intenta capturar usando la capsula | ¿la captura siempre tiene éxito o existe una posibilidad de fallar? |
+| 3 | capsula en el inventario | ¿que ocurre si el entrenador no tiene capsulas disponibles al momneto de capturar? |
 
 ### 1.3 Supuesto provisional
 
-**Supuesto:** COMPLETAR  
-**Por qué es provisional:** COMPLETAR  
-**Cómo podría confirmarse:** COMPLETAR
+**Supuesto:** El entrenador debe tener al menos una capsula disponible, para intentar realizar una captura.
+**Por qué es provisional:** El enunciado menciona que utiliza una capsula, pero no indica que ocurre si no tiene ninguna.
+**Cómo podría confirmarse:** Consultando al cliente o revisando las reglas oficiales del sistema.
 
 Un supuesto no es una verdad del caso. Debe quedar marcado hasta que el cliente, una regla oficial o una evidencia lo confirme.
 
