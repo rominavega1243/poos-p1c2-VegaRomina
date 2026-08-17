@@ -12,7 +12,7 @@
 | Integrante 1 | Romina vega |
 | Integrante 2 | Natalia Gonzalez |
 | TI3021  17-08-2027 |  |
-| URL del repositorio | COMPLETAR AL FINAL |
+| URL del repositorio |                    |
 
 ## Propósito
 
@@ -28,8 +28,8 @@ Analizar y delimitar una funcionalidad antes de diseñar clases o escribir códi
 
 ### 1.1 Tres hechos explícitos
 
-1. entrenador
-2. criatura salvaje
+1. Entrenador
+2. Criatura salvaje
 3. Capsula
 
 ### 1.2 Tres ambigüedades convertidas en preguntas
@@ -38,7 +38,7 @@ Analizar y delimitar una funcionalidad antes de diseñar clases o escribir códi
 |---:|---|---|
 | 1 | Criatura salvaje crecana | ¿existe distancia minima que debe estar para la capturar? |
 | 2 | El entrenador intenta capturar usando la capsula | ¿la captura siempre tiene éxito o existe una posibilidad de fallar? |
-| 3 | capsula en el inventario | ¿que ocurre si el entrenador no tiene capsulas disponibles al momneto de capturar? |
+| 3 | Capsula en el inventario | ¿que ocurre si el entrenador no tiene capsulas disponibles al momneto de capturar? |
 
 ### 1.3 Supuesto provisional
 
@@ -64,30 +64,30 @@ Fórmula orientadora:
 
 #### Entradas necesarias
 
-1. verificar que la criatura correspnde al escenario de captura.
-2. comprobar que el entrenador dispone con capsula para realizar la captura.
-3. proceso al intento de captura según las reglas definidas.
-4. determinar si la  criatura fue capturada.
-5. actualizar la cantidad de capsulas cuando corresponda.
-6. registrar el destino de la criatura después de la captura exitosa.
+1. Verificar que la criatura correspnde al escenario de captura.
+2. Comprobar que el entrenador dispone con capsula para realizar la captura.
+3. Proceso al intento de captura según las reglas definidas.
+4. Determinar si la  criatura fue capturada.
+5. Actualizar la cantidad de capsulas cuando corresponda.
+6. Registrar el destino de la criatura después de la captura exitosa.
 
 #### Proceso observable
 
-1. el sistema identifica la criatura como el objetivo de la captura.
-2. se permite continuar o se informa que no hay capsulas disponibles.
-3. resultados observables si la captura exitosa o fallida.
-4. mensaje indicando exito fracaso.
-5. inventario actualizado según el éxito según del resultado de la captura
-6. criatura incorporada al equipo activo o enviado a reserva  si el equipo esta completo.
+1. El sistema identifica la criatura como el objetivo de la captura.
+2. Se permite continuar o se informa que no hay capsulas disponibles.
+3. Resultados observables si la captura exitosa o fallida.
+4. Mensaje indicando exito fracaso.
+5. Inventario actualizado según el éxito según del resultado de la captura
+6. Criatura incorporada al equipo activo o enviado a reserva  si el equipo esta completo.
 
 #### Salidas esperadas
 
-1. criatura como objetivo disponible para capturar.
-2. confirmacion de que la capsula esta disponible o mensajen indicicando que no hay capsulas disponinnbles.
-3. resultados de captura: exitosa o fallida.
-4. mensaje que informa si la criatura fue capturada correctamente o si la captura fallo.
-5. cantidad de capsulas actualizadas correctamene.
-6. criatura incorporada al equipo actual o enviado a la reserva.
+1. Criatura como objetivo disponible para capturar.
+2. Confirmacion de que la capsula esta disponible o mensajen indicicando que no hay capsulas disponinnbles.
+3. Resultados de captura: exitosa o fallida.
+4. Mensaje que informa si la criatura fue capturada correctamente o si la captura fallo.
+5. Cantidad de capsulas actualizadas correctamene.
+6. Criatura incorporada al equipo actual o enviado a la reserva.
 
 **Prueba de coherencia:** cada salida debe poder explicarse a partir de una entrada, una regla conocida y un paso del proceso.
 
@@ -98,35 +98,35 @@ Una **regla** define qué comportamiento es válido. Una **restricción** limita
 ### 3.1 Reglas del problema
 
 1. La captura se inicia por un entrenador.
-2. La criatura objetivo debe ser una criatura salvaje cercana
-3. La captura utiliza una capsula del inventario del entrenador
-4. El resultado del intento de captura debe ser informado de una forma observable
+2. La criatura objetivo debe ser una criatura salvaje cercana.
+3. La captura utiliza una capsula del inventario del entrenador.
+4. El resultado del intento de captura debe ser informado de una forma observable.
 
 ### 3.2 Restricciones
 
 1. En esta versión no se defnine clases, atributos ni métodos 
-2. La ficha se limita  a definicir alcances, reglas, entradas, procesos, salidas y los criterios de aceptacion
-3. Las condicione de exito, consumoms de capsulay de comportamineto de la criatura deben ser confirmada anntes de implemnetarse al inventario.
+2. La ficha se limita  a definir alcances, reglas, entradas, procesos, salidas y los criterios de aceptacion.
+3. Las condicione de exito,consumo de capsula y de comportamiento de la criatura deben ser confirmada anntes de implemnetarse al inventario.
 
 ### 3.3 Delimitación de la primera versión
 
 #### Dentro del alcance
 
-1. Intentar captura una criatura salvaje cercana
-2. Validar disponibilidad de las capsulas
-3. informar el resultado y actualizar el destino de la criatura
+1. Intentar captura una criatura salvaje cercana.
+2. Validar disponibilidad de las capsulas.
+3. Informar el resultado y actualizar el destino de la criatura.
    
 
 #### Fuera del alcance
 
-1. Sistema de combate o daño a criaturas
-2. Compra, venta o la fabricación de las capsulas
-3. Gestión completa del equipo, y las estadísticas o su evolucion
+1. Sistema de combate o daño a criaturas.
+2. Compra, venta o la fabricación de las capsulas.
+3. Gestión completa del equipo, y las estadísticas o su evolucion.
 
 #### Supuestos por confirmar
 
-1. probilidad o que mecanismo exacto que determina que capturaste exitosamente.
-2. capsula si se consume en todo los intentos o solo un uso.
+1. Probilidad o que mecanismo exacto que determina que capturaste exitosamente.
+2. Capsula si se consume en todo los intentos o solo un uso.
 3. Regla exacta para el destino cuando si el equipo esta completo.
 
 ### 3.4 Preguntas pendientes
@@ -142,10 +142,10 @@ Estructura sugerida:
 
 > Dado **[contexto]**, cuando **[acción]**, entonces **[resultado observable]**.
 
-**Criterio 1:** Dado cunado entonces 
-dado que el entrenador tiene al menos una capsula y una criatura salvaje cercana, cuando intenta capturarla , entonces el sistema procesa el intento e informa si la captura es exitosa o fallida.
-**Criterio 2:** 
-dado qu el entrenador no tiene capsulas disponibles , cuando intenta capturar una criatura,  entonces el sistema impide el intento, no modifica el inventario  informa que no hay capsulas.
+**Criterio 1:** Dado...cuando...entonces 
+Dado que el entrenador tiene al menos una capsula y una criatura salvaje cercana, cuando intenta capturarla , entonces el sistema procesa el intento e informa si la captura es exitosa o fallida.
+**Criterio 2:** Dado...cuando...entonces
+Dado que el entrenador no tiene capsulas disponibles , cuando intenta capturar una criatura,  entonces el sistema impide el intento, no modifica el inventario informa que no hay capsulas.
 
 ### 4.1 Intercambio con otra pareja
 
