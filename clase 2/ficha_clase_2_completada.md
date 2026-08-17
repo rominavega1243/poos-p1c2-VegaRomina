@@ -36,7 +36,7 @@ Analizar y delimitar una funcionalidad antes de diseñar clases o escribir códi
 
 | N.º | Expresión ambigua | Pregunta que debe responder el cliente |
 |---:|---|---|
-| 1 | Distancia | ¿existe distancia minima que debe estar para la captura del pokemon? |
+| 1 | Criatura salvaje crecana | ¿existe distancia minima que debe estar para la capturar? |
 | 2 | El entrenador intenta capturar usando la capsula | ¿la captura siempre tiene éxito o existe una posibilidad de fallar? |
 | 3 | capsula en el inventario | ¿que ocurre si el entrenador no tiene capsulas disponibles al momneto de capturar? |
 
@@ -44,7 +44,7 @@ Analizar y delimitar una funcionalidad antes de diseñar clases o escribir códi
 
 **Supuesto:** El entrenador debe tener al menos una capsula disponible, para intentar realizar una captura.
 **Por qué es provisional:** El enunciado menciona que utiliza una capsula, pero no indica que ocurre si no tiene ninguna.
-**Cómo podría confirmarse:** Consultando al cliente o revisando las reglas oficiales del sistema.
+**Cómo podría confirmarse:** Consultando al cliente o mediante una regla oficial del sistema.
 
 Un supuesto no es una verdad del caso. Debe quedar marcado hasta que el cliente, una regla oficial o una evidencia lo confirme.
 
@@ -57,33 +57,33 @@ Fórmula orientadora:
 ### 2.1 Actor, necesidad y objetivo
 
 **Actor principal:** Entrenador  
-**Necesidad:** COMPLETAR  
-**Objetivo reescrito:** COMPLETAR
+**Necesidad:** Capturar una criatura salvaje cercana utilizando la capsula de su inventario.
+**Objetivo reescrito:** Permitir que el entrenador cuando intente capturar una criatura salvaje cerca con una capsula disponible y obtener un resultado de captura.
 
 ### 2.2 Entrada, proceso y salida (EPS)
 
 #### Entradas necesarias
 
-1. COMPLETAR
-2. COMPLETAR
-3. COMPLETAR
-4. COMPLETAR
+1. Criatura salvaje cercana
+2. Entrenador
+3. Capsula del inventario
+4. Resultado de la captura
 
 #### Proceso observable
 
-1. COMPLETAR
-2. COMPLETAR
-3. COMPLETAR
-4. COMPLETAR
-5. COMPLETAR
-6. COMPLETAR
+1. Identificar la criatura 
+2. Comprobar si existe una capsula disponible 
+3. Identificar el que inicie la interaccion
+4. Intento de la captura
+5. Determinar y comunicar el resultado observable
+6. 
 
 #### Salidas esperadas
 
-1. COMPLETAR
-2. COMPLETAR
-3. COMPLETAR
-4. COMPLETAR
+1. Criatura identificada como objetivo
+2. El entrenador quede reconocido como el actor
+3. Capsula disponible informada
+4. Captura exitosa o no exitoso
 
 **Prueba de coherencia:** cada salida debe poder explicarse a partir de una entrada, una regla conocida y un paso del proceso.
 
@@ -93,41 +93,41 @@ Una **regla** define qué comportamiento es válido. Una **restricción** limita
 
 ### 3.1 Reglas del problema
 
-1. COMPLETAR
-2. COMPLETAR
-3. COMPLETAR
-4. COMPLETAR
+1. La captura se inicia por un entrenador.
+2. La criatura objetivo debe ser una criatura salvaje cercana
+3. La captura utiliza una capsula del inventario del entrenador
+4. El resultado del intento de captura debe ser informado de una forma observable
 
 ### 3.2 Restricciones
 
-1. COMPLETAR
-2. COMPLETAR
-3. COMPLETAR
+1. En esta versión no se defnine clases, atributos ni métodos 
+2. La ficha se limita  a definicir alcances, reglas, entradas, procesos, salidas y los criterios de aceptacion
+3. Las condicione de exito, consumoms de capsulay de comportamineto de la criatura deben ser confirmada anntes de implemnetarse al inventario.
 
 ### 3.3 Delimitación de la primera versión
 
 #### Dentro del alcance
 
-1. COMPLETAR
-2. COMPLETAR
-3. COMPLETAR
+1. 
+2. 
+3. 
 
 #### Fuera del alcance
 
-1. COMPLETAR
-2. COMPLETAR
-3. COMPLETAR
+1. 
+2. 
+3. 
 
 #### Supuestos por confirmar
 
-1. COMPLETAR
-2. COMPLETAR
-3. COMPLETAR
+1. 
+2. 
+3. 
 
 ### 3.4 Preguntas pendientes
 
-1. COMPLETAR
-2. COMPLETAR
+1. 
+2. 
 
 ## 4. Criterios de aceptación y revisión entre pares
 
