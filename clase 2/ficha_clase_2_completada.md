@@ -10,8 +10,8 @@
 | Identificación | Información |
 |---|---|
 | Integrante 1 | Romina vega |
-| Integrante 2 | COMPLETAR |
-| Sección y fecha | COMPLETAR |
+| Integrante 2 | Natalia Gonzalez |
+| TI3021  17-08-2027 |  |
 | URL del repositorio | COMPLETAR AL FINAL |
 
 ## Propósito
@@ -64,26 +64,30 @@ Fórmula orientadora:
 
 #### Entradas necesarias
 
-1. Criatura salvaje cercana
-2. Entrenador
-3. Capsula del inventario
-4. Resultado de la captura
+1. verificar que la criatura correspnde al escenario de captura.
+2. comprobar que el entrenador dispone con capsula para realizar la captura.
+3. proceso al intento de captura según las reglas definidas.
+4. determinar si la  criatura fue capturada.
+5. actualizar la cantidad de capsulas cuando corresponda.
+6. registrar el destino de la criatura después de la captura exitosa.
 
 #### Proceso observable
 
-1. Identificar la criatura 
-2. Comprobar si existe una capsula disponible 
-3. Identificar el que inicie la interaccion
-4. Intento de la captura
-5. Determinar y comunicar el resultado observable
-6. 
+1. el sistema identifica la criatura como el objetivo de la captura.
+2. se permite continuar o se informa que no hay capsulas disponibles.
+3. resultados observables si la captura exitosa o fallida.
+4. mensaje indicando exito fracaso.
+5. inventario actualizado según el éxito según del resultado de la captura
+6. criatura incorporada al equipo activo o enviado a reserva  si el equipo esta completo.
 
 #### Salidas esperadas
 
-1. Criatura identificada como objetivo
-2. El entrenador quede reconocido como el actor
-3. Capsula disponible informada
-4. Captura exitosa o no exitoso
+1. criatura como objetivo disponible para capturar.
+2. confirmacion de que la capsula esta disponible o mensajen indicicando que no hay capsulas disponinnbles.
+3. resultados de captura: exitosa o fallida.
+4. mensaje que informa si la criatura fue capturada correctamente o si la captura fallo.
+5. cantidad de capsulas actualizadas correctamene.
+6. criatura incorporada al equipo actual o enviado a la reserva.
 
 **Prueba de coherencia:** cada salida debe poder explicarse a partir de una entrada, una regla conocida y un paso del proceso.
 
@@ -108,26 +112,27 @@ Una **regla** define qué comportamiento es válido. Una **restricción** limita
 
 #### Dentro del alcance
 
-1. 
-2. 
-3. 
+1. Intentar captura una criatura salvaje cercana
+2. Validar disponibilidad de las capsulas
+3. informar el resultado y actualizar el destino de la criatura
+   
 
 #### Fuera del alcance
 
-1. 
-2. 
-3. 
+1. Sistema de combate o daño a criaturas
+2. Compra, venta o la fabricación de las capsulas
+3. Gestión completa del equipo, y las estadísticas o su evolucion
 
 #### Supuestos por confirmar
 
-1. 
-2. 
-3. 
+1. probilidad o que mecanismo exacto que determina que capturaste exitosamente.
+2. capsula si se consume en todo los intentos o solo un uso.
+3. Regla exacta para el destino cuando si el equipo esta completo.
 
 ### 3.4 Preguntas pendientes
 
-1. 
-2. 
+1. ¿Qué condiciones exactas determinan que una criatura sea considerada "cercana"?
+2. ¿Qué regla determina si la captura es exitosa y como se consume la capsula?
 
 ## 4. Criterios de aceptación y revisión entre pares
 
@@ -137,18 +142,21 @@ Estructura sugerida:
 
 > Dado **[contexto]**, cuando **[acción]**, entonces **[resultado observable]**.
 
-**Criterio 1:** COMPLETAR  
-**Criterio 2:** COMPLETAR
+**Criterio 1:** Dado cunado entonces 
+dado que el entrenador tiene al menos una capsula y una criatura salvaje cercana, cuando intenta capturarla , entonces el sistema procesa el intento e informa si la captura es exitosa o fallida.
+**Criterio 2:** 
+dado qu el entrenador no tiene capsulas disponibles , cuando intenta capturar una criatura,  entonces el sistema impide el intento, no modifica el inventario  informa que no hay capsulas.
 
 ### 4.1 Intercambio con otra pareja
 
 La pareja revisora debe leer la ficha sin una explicación oral y detectar una ambigüedad que obligaría a inventar una regla al diseñar la solución.
 
-**Pareja revisora:** COMPLETAR  
-**Ambigüedad detectada:** COMPLETAR  
-**Pregunta sugerida:** COMPLETAR  
+**Pareja revisora:** Romina Vega 
+**Ambigüedad detectada:** No se define que significa exactamente que una criatura este "cercana".
+**Pregunta sugerida:** ¿ Que condición concreta debe cumplirse para considerar que una criatura esta cercana? 
 **Decisión del equipo:** ACEPTAR / AJUSTAR / RECHAZAR  
-**Justificación:** COMPLETAR
+**Justificación:** Aceptar la observación: la pregunta evita inventar una regla durante el diseño y mantiene el punto 
+como pendiente
 
 ## 5. IA como auditora de requisitos
 
