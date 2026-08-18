@@ -144,6 +144,7 @@ Estructura sugerida:
 
 **Criterio 1:** Dado...cuando...entonces 
 Dado que el entrenador tiene al menos una capsula y una criatura salvaje cercana, cuando intenta capturarla , entonces el sistema procesa el intento e informa si la captura es exitosa o fallida.
+
 **Criterio 2:** Dado...cuando...entonces
 Dado que el entrenador no tiene capsulas disponibles , cuando intenta capturar una criatura,  entonces el sistema impide el intento, no modifica el inventario informa que no hay capsulas.
 
