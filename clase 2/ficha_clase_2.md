@@ -165,8 +165,8 @@ Primero guarden la ficha original. La IA puede detectar vacíos y formular pregu
 
 ### 5.1 Registro de la consulta
 
-**Herramienta y fecha:** COMPLETAR  
-**Versión original guardada:** SÍ / NO
+**Herramienta y fecha:** ChatGPT, 17-08-2026
+**Versión original guardada:** SÍ
 
 **Prompt sugerido:**
 
@@ -176,15 +176,15 @@ Primero guarden la ficha original. La IA puede detectar vacíos y formular pregu
 
 | Observación de la IA | Decisión | Justificación del equipo | Cambio realizado |
 |---|---|---|---|
-| COMPLETAR | Aceptar / ajustar / rechazar | COMPLETAR | COMPLETAR |
-| COMPLETAR | Aceptar / ajustar / rechazar | COMPLETAR | COMPLETAR |
-| COMPLETAR | Aceptar / ajustar / rechazar | COMPLETAR | COMPLETAR |
+| Ambigüedad en el consumo de cápsulas | Aceptar | Para definir las reglas de negocio es fundamental saber cómo interactúa el inventario con cada intento fallido o exitoso. | Se añadiria un supuesto en la Sección 3.3 indicando que la cápsula se consume en cada intento independientemente del resultado, a la espera de confirmación del cliente. |
+| Indefinición sobre qué ocurre tras un intento fallido | Aceptar | Es un vacío importante en el flujo observable del proceso. | Se aclararia en el proceso que un fallo solo genera la notificación de fracaso, manteniendo la criatura disponible para un nuevo intento. |
+| Presunción de que siempre existe la probabilidad de fallo. | ajustar | No debemos de asumir mecánicas complejas si no han sido especificadas por el cliente.| Se dejaria como un supuesto etiquetado de [PENDIENTE CONFIRMACIÓN] en el algoritmo de probabilidad de captura. |
 
 ### 5.3 Pregunta de autoría
 
-**¿Qué sugerencia rechazaron?** COMPLETAR  
-**¿Por qué no correspondía?** COMPLETAR  
-**¿Qué decisión fue exclusivamente del equipo?** COMPLETAR
+**¿Qué sugerencia rechazaron?** La sugerencia de definir la reacción de la criatura tras un intento fallido, dando por ejemplo el si la criatura huye del encuentro o si ataca al entrenador.
+**¿Por qué no correspondía?** Porque el comportamiento posterior de la criatura o el combate forman parte del sistema de batalla. 
+**¿Qué decisión fue exclusivamente del equipo?** Solo mantener la cápsula como un recurso que se consume en cualquier intento (exitoso o fallido).
 
 > No publiquen contraseñas, correos personales, claves, tokens ni información sensible en la consulta o en el repositorio.
 
@@ -194,40 +194,42 @@ Primero guarden la ficha original. La IA puede detectar vacíos y formular pregu
 
 ### 6.1 Análisis del impacto
 
-**Qué cambió:** COMPLETAR  
+**Qué cambió:** Se agregó una condición sobre el estado del equipo activo de la capacidad máxima de 6 criaturas, que determina el destino final de la criatura tras una captura exitosa.
 **Secciones afectadas:** ENTRADA / PROCESO / SALIDA / REGLA / ALCANCE / SUPUESTO  
-**Nueva decisión:** COMPLETAR  
-**Justificación:** COMPLETAR
+**Nueva decisión:** Se acepta el cambio y se incorpora la validación del tamaño del equipo activo como paso previo a definir el destino final de la criatura. 
+**Justificación:** La decisión garantiza la coherencia con la regla de negocio del cliente sin extender el alcance a un sistema completo de gestión de reserva.
 
 ### 6.2 Actualización
 
 | Elemento | Antes | Después del cambio |
 |---|---|---|
-| Entrada/EPS | COMPLETAR | COMPLETAR |
-| Proceso | COMPLETAR | COMPLETAR |
-| Regla | COMPLETAR | COMPLETAR |
-| Alcance | COMPLETAR | COMPLETAR |
+| Entrada/EPS | Se verifica la disponibilidad de la cápsula y el estado de la criatura. | Se agrega como entrada la cantidad actual de criaturas en el equipo activo. |
+| Proceso | La Criatura es incorporada al equipo activo o es enviada a reserva sin un criterio explícito de límite. | Se evalúa el tamaño del equipo activo: si es menor a 6, la criatura va al equipo, de otra forma, si es igual a 6, se redirige a la reserva.|
+| Regla | La criatura capturada se incorpora al equipo. | Según la regla 3.1.5: El equipo activo no puede superar las 6 criaturas. Si el equipo tiene 6, la captura exitosa debe enviarse a la reserva. |
+| Alcance | Gestión completa del equipo fuera del alcance. | Se mantiene fuera de alcance la gestión del almacenamiento, limitándose únicamente a registrar el evento de envío a la reserva. |
 
 ### 6.3 Nuevo criterio de aceptación
 
-**Criterio:** COMPLETAR  
-**Evidencia esperada:** COMPLETAR
+**Criterio:** Dado que el entrenador tiene 6 criaturas en su equipo activo, una cápsula disponible y una criatura salvaje cercana, cuando este realiza una captura exitosa, entonces el sistema asigna la criatura a la reserva e informa que fue enviada a la reserva por tener el equipo completo.  
+**Evidencia esperada:** Un mensaje o confirmación observable del sistema indicando que la captura fue exitosa y que el destino de la criatura es la reserva.
 
 ## 7. Ticket de salida
 
-**Resumen en una frase con actor, necesidad, regla principal y resultado:** COMPLETAR  
-**Evidencia más clara:** COMPLETAR  
-**Ambigüedad pendiente:** COMPLETAR  
-**Mejora concreta:** COMPLETAR
+**Resumen en una frase con actor, necesidad, regla principal y resultado:** Permitir que el Entrenador intente capturar una criatura salvaje cercana utilizando una cápsula de su inventario, respetandose el límite de 6 criaturas en el equipo activo, para obtener como resultado observable la actualización de sus recursos y la confirmación del destino de la criatura (permaneciendo en el equipo o yendo a la reserva). 
+**Evidencia más clara:** Un mensaje del sistema que confirme explícitamente el resultado de la captura (éxito o fallo), el descuento correspondiente de la cápsula en el inventario y la ubicación final de la criatura (en el equipo activo o en la reserva)
+**Ambigüedad pendiente:** La definición exacta de las condiciones para considerar a una criatura como "cercana" (distancia o rango numérico) y la regla/probabilidad explícita que determina si el intento de captura tiene éxito o falla.
+**Mejora concreta:** La incorporación precisa de la regla del equipo lleno con máximo de 6 criaturas y la redirección a reserva en el alcance.
 
 ## 8. Comprobación final
 
-- [ ] Conservamos una versión anterior a la auditoría con IA.
-- [ ] Actor, necesidad, entradas, proceso y salidas son coherentes.
-- [ ] Reglas, restricciones, supuestos y alcance están diferenciados.
-- [ ] Los criterios de aceptación son observables y verificables.
-- [ ] El cambio del cliente quedó incorporado y justificado.
-- [ ] No diseñamos clases ni escribimos código antes de tiempo.
+- [x] Conservamos una versión anterior a la auditoría con IA.
+- [x] Actor, necesidad, entradas, proceso y salidas son coherentes.
+- [x] Reglas, restricciones, supuestos y alcance están diferenciados.
+- [x] Los criterios de aceptación son observables y verificables.
+- [x] El cambio del cliente quedó incorporado y justificado.
+- [x] No diseñamos clases ni escribimos código antes de tiempo.
+
+
 
 ## 9. Entrega
 
