@@ -2,11 +2,11 @@
 
 ## Identificación
 
-- **Nombre:** COMPLETAR
+- **Nombre:** Romina Vega
 - **Sección:** COMPLETAR
-- **Fecha:** COMPLETAR
+- **Fecha:** 18-08-2026
 - **Compañero(a) de trabajo:** COMPLETAR
-- **Repositorio individual:** `completar`
+- **Repositorio individual:** 
 
 # Parte 0. Punto de partida validado
 
@@ -108,15 +108,37 @@ Capturar una criatura salvaje disponible utilizando una cápsula de su inventari
 # Tarjetas de clase y responsabilidades
 
 
-## Clase Plantilla
+## Clase 
 
-- **Nombre:** COMPLETAR
-- **Responsabilidad principal:** COMPLETAR
-- **Atributos necesarios:** COMPLETAR
-- **Métodos posibles:** COMPLETAR
-- **Clase con la que necesita colaborar:** COMPLETAR
-- **Regla o criterio de aceptación que la justifica:** COMPLETAR
-- **Responsabilidad que no debería asumir:** COMPLETAR
+- **Nombre:** Entrenador
+- **Responsabilidad principal:**  Capturar criaturas disponible.
+- **Atributos necesarios:** Posicion, alias.
+- **Métodos posibles:** Caminar, capturar,subir niveles.
+- **Clase con la que necesita colaborar:** Equipo.
+- **Regla o criterio de aceptación que la justifica:** La criatura se registra únicamente si la captura tiene éxito.
+- **Responsabilidad que no debería asumir:** 
+
+
+## Clase 
+
+- **Nombre:** Inventario
+- **Responsabilidad principal:** Guardar criaturas capturadas
+- **Atributos necesarios:** espacio maximo , capacidad ocupada, cantidad de capsulas. 
+- **Métodos posibles:** Mantener criaturas capturadas.
+- **Clase con la que necesita colaborar:** Entrenador.
+- **Regla o criterio de aceptación que la justifica:**  captura exitosa.
+- **Responsabilidad que no debería asumir:** 
+
+
+## Clase
+
+- **Nombre:** Reserva
+- **Responsabilidad principal:** Mantener el registros de la criaturas no ingresadas al equipo activo
+- **Atributos necesarios:** Registro de datos , capacidad maxima  , mantener
+- **Métodos posibles:** Mantener registrados criaturas no ingresadas
+- **Clase con la que necesita colaborar:** Inventario
+- **Regla o criterio de aceptación que la justifica:** 
+- **Responsabilidad que no debería asumir:** 
 
 
 ## Comprobación de coherencia
