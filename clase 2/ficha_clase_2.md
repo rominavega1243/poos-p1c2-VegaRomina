@@ -11,7 +11,7 @@
 |---|---|
 | Integrante 1 | Romina vega |
 | Integrante 2 | Natalia Gonzalez |
-| TI3021  17-08-2027 |  |
+| TI3021  17-08-2026 |  |
 | URL del repositorio |                    |
 
 ## Propósito
