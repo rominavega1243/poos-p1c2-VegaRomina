@@ -3,10 +3,10 @@
 ## Identificación
 
 - **Nombre:** Romina Vega
-- **Sección:** COMPLETAR
+- **Sección:** TI3021
 - **Fecha:** 18-08-2026
-- **Compañero(a) de trabajo:** COMPLETAR
-- **Repositorio individual:** 
+- **Compañero(a) de trabajo:** 
+- **Repositorio individual:** https://github.com/rominavega1243/poos-p1c2-VegaRomina.git
 
 # Parte 0. Punto de partida validado
 
