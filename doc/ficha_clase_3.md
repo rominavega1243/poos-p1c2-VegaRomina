@@ -112,11 +112,11 @@ Capturar una criatura salvaje disponible utilizando una cápsula de su inventari
 
 - **Nombre:** Entrenador
 - **Responsabilidad principal:**  Capturar criaturas disponible.
-- **Atributos necesarios:** Posicion, alias.
-- **Métodos posibles:** Caminar, capturar,subir niveles.
+- **Atributos necesarios:** Posición, alias.
+- **Métodos posibles:** caminar, capturar, subir niveles.
 - **Clase con la que necesita colaborar:** Equipo.
 - **Regla o criterio de aceptación que la justifica:** La criatura se registra únicamente si la captura tiene éxito.
-- **Responsabilidad que no debería asumir:** 
+- **Responsabilidad que no debería asumir:** Administrar el equipo de criaturas.
 
 
 ## Clase 
@@ -127,33 +127,33 @@ Capturar una criatura salvaje disponible utilizando una cápsula de su inventari
 - **Métodos posibles:** Mantener criaturas capturadas.
 - **Clase con la que necesita colaborar:** Entrenador.
 - **Regla o criterio de aceptación que la justifica:**  captura exitosa.
-- **Responsabilidad que no debería asumir:** 
+- **Responsabilidad que no debería asumir:** Capturar criaturas.
 
 
 ## Clase
 
 - **Nombre:** Reserva
 - **Responsabilidad principal:** Mantener el registros de la criaturas no ingresadas al equipo activo
-- **Atributos necesarios:** Registro de datos , capacidad maxima  , mantener
+- **Atributos necesarios:** Registro de datos , capacidad máxima  , mantener
 - **Métodos posibles:** Mantener registrados criaturas no ingresadas
 - **Clase con la que necesita colaborar:** Inventario
-- **Regla o criterio de aceptación que la justifica:** 
-- **Responsabilidad que no debería asumir:** 
+- **Regla o criterio de aceptación que la justifica:** La criatura se registra únicamente si la captura tiene éxito.
+- **Responsabilidad que no debería asumir:** Capturar criaturas
 
 
 ## Comprobación de coherencia
 
 1. ¿Existe una clase que concentre casi todas las acciones? ¿Cuál y qué responsabilidad debería trasladarse?
 
-   **Respuesta:** COMPLETAR
+   **Respuesta:** Si, Entrenador concentra varias acciones.la responsabilidad es de mantener las criaturas capturadas debería trasladarse a inventario.
 
 2. ¿Existe un método en una clase que no posee los datos necesarios para realizarlo?
 
-   **Respuesta:** COMPLETAR
+   **Respuesta:**Si , Reserva ya que tiene el método  de mantener criaturas registradas, pero necesita información de las criaturas que maneja el Inventario.
 
 3. ¿Existe el mismo atributo en varias clases sin una justificación clara?
 
-   **Respuesta:** COMPLETAR
+   **Respuesta:** No , cada clase tiene atributos diferentes según su responsabilidad.
 
 ---
 
@@ -161,17 +161,17 @@ Capturar una criatura salvaje disponible utilizando una cápsula de su inventari
 
 Elige una de tus clases y crea dos objetos con estados distintos.
 
-- **Clase seleccionada:** COMPLETAR
+- **Clase seleccionada:** Criaturas
 
-| Atributo | Objeto 1: `COMPLETAR` | Objeto 2: `COMPLETAR` |
-|----------|-----------------------|-----------------------|
-| COMPLETAR | COMPLETAR | COMPLETAR |
-| COMPLETAR | COMPLETAR | COMPLETAR |
-| COMPLETAR | COMPLETAR | COMPLETAR |
+| Atributo | Objeto 1: Pikachu | Objeto 2: Golduck |
+|----------|-----------------------  |-----------------------|
+| Nombre   |    Pikachu              | Golduck               |
+| Nivel    |      6                  |   9                   |
+| Estado   | Capturado               | Capturado             |
 
-- **Método que ambos objetos pueden ejecutar:** COMPLETAR
-- **¿Qué comparten por pertenecer a la misma clase?:** COMPLETAR
-- **¿Qué cambia entre ambos objetos?:** COMPLETAR
+- **Método que ambos objetos pueden ejecutar:** Subir de nivel.
+- **¿Qué comparten por pertenecer a la misma clase?:** Ambas son criaturas que pueden ser capturadas y subir de nivel.
+- **¿Qué cambia entre ambos objetos?:** El nombre, el nivel y las características propias de cada criaturas.
 
 ---
 
@@ -181,13 +181,13 @@ Relaciona cada comportamiento esperado con las responsabilidades propuestas.
 
 | Criterio | ¿Qué información se necesita? | ¿Qué clase debería conocerla? | ¿Qué acción debe realizarse? | ¿Qué clase debería realizarla? |
 |----------|-------------------------------|-------------------------------|------------------------------|--------------------------------|
-| Sin cápsulas | COMPLETAR | COMPLETAR | COMPLETAR | COMPLETAR |
-| Intento válido | COMPLETAR | COMPLETAR | COMPLETAR | COMPLETAR |
-| Fuera de rango | COMPLETAR | COMPLETAR | COMPLETAR | COMPLETAR |
-| Captura exitosa | COMPLETAR | COMPLETAR | COMPLETAR | COMPLETAR |
+| Sin cápsulas | Cantidad de capsulas disponibles| Inventario | Rechazar la captura e informar que no hay capsulas | Entrenador|
+| Intento válido | Disponibilidad, distancia y cantidad de capsulas. | Entrenador e Inventario | Consumir una capsula y determinar el resultado. | Entrenador |
+| Fuera de rango | Distancia entre el entrenador y la criatura | Entrenador | Rechazar la captura sin consumir capsulas | Entrenador |
+| Captura exitosa | Resultado de la captura y datos de la criatura | Entrenador y Criatura | Registrar la criatura capturada | Inventario|
 
 ## Pregunta de análisis
 
 ¿Existe algún criterio de aceptación que no pueda cumplirse con las clases y responsabilidades propuestas?
 
-**Respuesta y ajuste necesario:** COMPLETAR
+**Respuesta y ajuste necesario:** No. Los criterios de aceptación pueden cumplirse con las clases propuestas. Entrenador se encarga de realizar la captura, Inventario controla las cápsulas y registra las criaturas capturadas, y Reserva mantiene registradas las criaturas que no ingresan al equipo activo.
